@@ -2,7 +2,7 @@
  * Module dependencies
  */
 var Resource	= require('deployd/lib/resource'),
-    PayPalAP	= require('node_modules/dpd-paypal-ap/node-modules/paypal-adaptive'),
+    PayPalAP	= require('paypal-adaptive'),
 	util		= require('util');
 
 /**

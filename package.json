@@ -7,7 +7,7 @@
     "paypal-adaptive": "0.1.1"
   },
   "repository": {
-  	"type": "git".
+  	"type": "git",
   	"url": "https://github.com/robrusher/dpd-paypal-ap.git"
   },
   "readmeFilename": "README.md",
