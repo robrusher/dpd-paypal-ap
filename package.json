@@ -6,6 +6,10 @@
   "dependencies": {
     "paypal-adaptive": "0.1.1"
   },
+  "repository": {
+  	"type": "git".
+  	"url": "https://github.com/robrusher/dpd-paypal-ap.git"
+  },
   "readmeFilename": "README.md",
   "_id": "dpd-paypal-ap@0.0.1",
   "description": "This custom resource type allows you to make adaptive payments through PayPal.",
