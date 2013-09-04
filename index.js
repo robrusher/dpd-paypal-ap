@@ -56,6 +56,7 @@ PayPalap.basicDashboard = {
 PayPalap.prototype.handle = function ( ctx, next ) {
   var request = ctx.req;
   var action = ctx.body.method;
+  var options = ctx.body.data;
   
   if ( ctx.req && ctx.req.method !== 'POST' ) {
     return next();
@@ -63,28 +64,28 @@ PayPalap.prototype.handle = function ( ctx, next ) {
   
  
   function cb( err, done ) {
-  	ctx.done( err, body );
+  	ctx.done( err, done );
   }
   
   switch ( action ) {
   	case 'getPaymentOptions':
-  		this.getPaymentOptions( ctx.body.payKey, cb );
+  		this.getPaymentOptions( options.payKey, cb );
   		break;
   	case 'getPaymentDetails':
-  		this.getPaymentDetails( ctx.body.params, cb );
+  		this.getPaymentDetails( options, cb );
   		break;
   	case 'createPayment':
   		console.log('createPayment method');
-  		this.createPayment( ctx.body.data, cb );
+  		this.createPayment( options, cb );
   		break;
   	case 'preapprovePayment':
-  		this.preapprovePayment( ctx.body.data, cb );
+  		this.preapprovePayment( options, cb );
   		break;
   	case 'refundPayment':
-  		this.refundPayment( ctx.body.params, cb );
+  		this.refundPayment( options, cb );
   		break;
   	default: //createAccount
-  		this.createAccount( ctx.body.data, cb );
+  		this.createAccount( options, cb );
   		break;
   }
 };
