@@ -72,20 +72,19 @@ PayPalap.prototype.handle = function ( ctx, next ) {
   		this.getPaymentOptions( options.payKey, cb );
   		break;
   	case 'getPaymentDetails':
-  		this.getPaymentDetails( options, cb );
+  		this.paymentDetails( options, cb );
   		break;
   	case 'createPayment':
   		console.log('createPayment method');
-  		this.createPayment( options, cb );
+  		this.pay( options, cb );
   		break;
   	case 'preapprovePayment':
-  		this.preapprovePayment( options, cb );
+  		this.preapproval( options, cb );
   		break;
   	case 'refundPayment':
-  		this.refundPayment( options, cb );
+  		this.refund( options, cb );
   		break;
-  	default: //createAccount
-  		this.createAccount( options, cb );
+  	default:
   		break;
   }
 };
@@ -96,14 +95,14 @@ PayPalap.prototype.getPaymentOptions = function( payKey, cb ){
 	});
 };
 
-PayPalap.prototype.getPaymentDetails = function( params, cb ) {
+PayPalap.prototype.paymentDetails = function( params, cb ) {
 	// params must contain: payKey, transactionId, trackingId
 	this.pp.getPaymentDetails( params, function( err, body ) {
 		cb( err, body );
 	});
 };
 
-PayPalap.prototype.createPayment = function( data, cb ) {
+PayPalap.prototype.pay = function( data, cb ) {
 	console.log('call module adaptive payments');
 	// data must contain: actionType, receiverList.receiver(0).email, receiverList.receiver(0).amount, currencyCode, cancelURL, returnURL
 	this.pp.createPayment( data, function( err, body ) {
@@ -111,22 +110,16 @@ PayPalap.prototype.createPayment = function( data, cb ) {
 	});
 };
 
-PayPalap.prototype.preapprovePayment = function( data, cb ) {
+PayPalap.prototype.preapproval = function( data, cb ) {
 	this.pp.preapprovePayment( data, function( err, body ) {
 		cb( err, body );
 	});
 };
 
-PayPalap.prototype.refundPayment = function( params, cb ) {
+PayPalap.prototype.refund = function( params, cb ) {
 	// params must contain: payKey, transactionId, trackingId
 	this.pp.refundPayment( params, function( err, body ) {
 		cb( err, body);
-	});
-};
-
-PayPalap.prototype.createAccount = function( data, cb ) {
-	this.pp.createAccount( data, function( err, body ) {
-		cb( err, body );
 	});
 };
 
