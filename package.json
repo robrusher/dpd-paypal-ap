@@ -1,6 +1,6 @@
 {
   "name": "dpd-paypal-ap",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author" : "Rob Rusher",
   "main": "index.js",
   "dependencies": {
@@ -11,7 +11,7 @@
   	"url": "https://github.com/robrusher/dpd-paypal-ap.git"
   },
   "readmeFilename": "README.md",
-  "_id": "dpd-paypal-ap@0.0.1",
+  "_id": "dpd-paypal-ap@0.0.4",
   "description": "This custom resource type allows you to make adaptive payments through PayPal.",
   "_from": "dpd-paypal-ap"
 }

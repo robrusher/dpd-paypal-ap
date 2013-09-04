@@ -10,7 +10,7 @@ var Resource	= require('deployd/lib/resource'),
  */
 function PayPalap( options ) {
   Resource.apply( this, arguments );
-  this.pp = PayPalAP({
+  this.pp = new PayPalAP({
 			  	userId: this.config.userID || 'your user id',
 			  	password: this.config.password || 'your password',
 			  	signature: this.config.signature || 'your app signature',
