@@ -1,6 +1,6 @@
 {
   "name": "dpd-paypal-ap",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": {
     "name": "Rob Rusher"
   },
@@ -13,9 +13,9 @@
     "url": "https://github.com/robrusher/dpd-paypal-ap.git"
   },
   "readmeFilename": "README.md",
-  "_id": "dpd-paypal-ap@0.0.8",
+  "_id": "dpd-paypal-ap@0.0.9",
   "description": "This custom resource type allows you to make adaptive payments through PayPal.",
-  "_from": "dpd-paypal-ap@0.0.8",
+  "_from": "dpd-paypal-ap@0.0.9",
   "readme": "dpd-paypal-ap\r\n==========================\r\n\r\nDeployd module for using a Node.js sdk for Paypal Adaptive Payments and Paypal Adaptive Accounts API, without dependencies",
   "bugs": {
     "url": "https://github.com/robrusher/dpd-paypal-ap/issues"
@@ -23,5 +23,5 @@
   "dist": {
     "shasum": "866a9d830cdf1b80790209ea7907174780cccde5"
   },
-  "_resolved": "https://registry.npmjs.org/dpd-paypal-ap/-/dpd-paypal-ap-0.0.8.tgz"
+  "_resolved": "https://registry.npmjs.org/dpd-paypal-ap/-/dpd-paypal-ap-0.0.9.tgz"
 }
