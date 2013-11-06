@@ -3,8 +3,8 @@ dpd-paypal-ap
 
 Deployd module for using a Node.js sdk for Paypal Adaptive Payments and Paypal Adaptive Accounts API, without dependencies
 
-USE:
-
+**USE:**
+```javascript
 var trans = {
 	"method":"Pay",
 	"data":
@@ -28,9 +28,8 @@ var trans = {
 };
 
 dpd.paypalap.post( trans, function(result, err) {   
-        if(err){
-            
-        } else {
-        
-        }
+	if(err){
+	} else {
+	}
 });
+```
